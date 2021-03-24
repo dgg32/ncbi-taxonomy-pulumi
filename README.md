@@ -1,5 +1,4 @@
-pulumi config set --secret dbPassword hle7fsb32da86
+# teachable-machine-paintings
 
-./venv/Scripts/pip install pymysql
+This repo contains code for the NCBI taxonomy Rest Api in my article Five Commands Build Two NCBI APIs on the Cloud via Pulumi. 
 
-serverless aurora can not create backup to s3
