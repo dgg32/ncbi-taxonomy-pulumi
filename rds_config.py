@@ -1,0 +1,5 @@
+db_username = ""
+db_password = ""
+db_name = "pyphydb"
+my_ip = ""
+region = ""

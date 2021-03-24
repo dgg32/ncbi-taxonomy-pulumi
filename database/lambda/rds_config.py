@@ -1,0 +1,6 @@
+db_username = "dgg32"
+db_password = "hle7fsb32da86"
+db_name = "pyphydb"
+my_ip = "77.20.138.248"
+region = "eu-central-1"
+db_endpoint = "aurora-cluster-1.cvpajz66jyq2.eu-central-1.rds.amazonaws.com"
