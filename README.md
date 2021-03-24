@@ -1,25 +1,5 @@
 
   
-
-  
-
-# Introduction
-
-  
-
-  
-
-This repository contains code and data for my article "".
-
-1. The graphql_genbank folder contains three GBK files and scripts for importing and querying. They were used in the tutorial
-
-  
-
-2. The other scripts are pulumi setup file.
-
-  
-
-  
 # Introduction
 
 This repo contains code for the NCBI taxonomy Rest Api in my article Five Commands Build Two NCBI APIs on the Cloud via Pulumi.
