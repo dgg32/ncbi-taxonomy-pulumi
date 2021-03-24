@@ -43,6 +43,7 @@ pulumi up -y
 ```
 7. To tear down the infrastruture, issue:
 ```console
+deactivate
 pulumi destroy -y
 ```
   
