@@ -13,24 +13,31 @@ Pulumi ([https://www.pulumi.com/docs/get-started/](https://www.pulumi.com/docs/g
 
 # Usage
 1. you need to unzip "data_files.zip" in the "database" folder. They are the NCBI taxonomy data in two tables.
-  
-2. initialize pulumi python, make sure you have cd into "database" folder, and issue
+
+2. Fill in all the details in rds_config.py
+
+3. initialize pulumi python, make sure you have cd into "database" folder, and issue
 ```console
-pulumi new aws-python
+python -m virtualenv venv
+source ./venv/Scripts/activate
+pip install -r requirements.txt
 ```
-3. set up Aurora
+
+Do the same for "lambda_api_gateway" folder.
+
+4. set up Aurora
 ```console
 pulumi up -y
 ```
-4. import the data
+5. import the data
 ```console
 python zip_and_import.py $(pulumi stack output instance-endpoint)
 ```
-5. set up Lambda and Api Gateway. Make sure you have cd into "lambda_api_gateway" folder. Issue:
+6. set up Lambda and Api Gateway. Make sure you have cd into "lambda_api_gateway" folder. Issue:
 ```console
 pulumi up -y
 ```
-6. To tear down the infrastruture, issue:
+7. To tear down the infrastruture, issue:
 ```console
 pulumi destroy -y
 ```
