@@ -20,6 +20,9 @@ This repository contains code and data for my article "".
   
 
   
+# Introduction
+
+This repo contains code for the NCBI taxonomy Rest Api in my article Five Commands Build Two NCBI APIs on the Cloud via Pulumi.
 
 # Prerequisite
 
@@ -27,32 +30,6 @@ This repository contains code and data for my article "".
 
 Pulumi ([https://www.pulumi.com/docs/get-started/](https://www.pulumi.com/docs/get-started/))
 
-  
-
-requests
-
-  
-
-genome2json (https://github.com/gamcil/genome2json, MIT license)
-
-  
-
-requests_aws4auth
-
-  
-
-boto3
-  
-
-# Run
-
-With Pulumi, the whole setup is much simpler
-
-# Introduction
-
-This repo contains code for the NCBI taxonomy Rest Api in my article Five Commands Build Two NCBI APIs on the Cloud via Pulumi.
-
-  
 
 # Usage
 1. you need to unzip "data_files.zip" in the "database" folder. They are the NCBI taxonomy data in two tables.
