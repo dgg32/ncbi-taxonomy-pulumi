@@ -23,8 +23,6 @@ source ./venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-Do the same for "lambda_api_gateway" folder.
-
 4. set up Aurora
 ```console
 pulumi up -y
@@ -34,7 +32,13 @@ pulumi up -y
 python zip_and_import.py $(pulumi stack output instance-endpoint)
 ```
 6. set up Lambda and Api Gateway. Make sure you have cd into "lambda_api_gateway" folder. Issue:
+
 ```console
+deactivate
+python -m virtualenv venv
+source ./venv/Scripts/activate
+pip install -r requirements.txt
+
 pulumi up -y
 ```
 7. To tear down the infrastruture, issue:
