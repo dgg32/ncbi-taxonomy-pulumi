@@ -25,14 +25,7 @@ ip = rds_config.my_ip
 lambda_security_group = aws.ec2.SecurityGroup("pulumi-ncbi-lambda",
     tags={
         "app": "pulumi-ncbi-lambda",
-    },
-egress=[aws.ec2.SecurityGroupEgressArgs(
-        description = "allow Aurora out",
-        from_port=3306,
-        to_port=3306,
-        protocol="tcp",
-        cidr_blocks=[f"0.0.0.0/0"]
-)]
+    }
 )
 
 default_security_group = aws.ec2.SecurityGroup("pulumi-ncbi", 
@@ -44,6 +37,14 @@ ingress=[aws.ec2.SecurityGroupIngressArgs(
         cidr_blocks=[f"{ip}/32"],
         security_groups = [lambda_security_group.id]
 )])
+
+allow_default_security_group = aws.ec2.SecurityGroupRule("allow_default_security_group",
+    type="egress",
+    to_port=3306,
+    protocol="tcp",
+    source_security_group_id = default_security_group.id,
+    from_port=3306,
+    security_group_id=lambda_security_group.id)
 
 
 

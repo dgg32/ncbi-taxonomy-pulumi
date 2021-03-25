@@ -1,5 +1,5 @@
 db_username = "dgg32"
-db_password = "hle7fsb32da86"
+db_password = "dfdfadfabopz70387zg23da"
 db_name = "pyphydb"
 my_ip = "77.20.138.248"
 region = "eu-central-1"
